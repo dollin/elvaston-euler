@@ -14,9 +14,8 @@ logging.basicConfig(format='%(asctime)s [%(levelname)s] %(message)s', level=logg
 
 
 def sum_of_multiples(x: int):
-    multiples_sum: int = 0
-
-    logging.info(f'below {x} the sum of multiples of 3 or 5 are: {multiples_sum}')
+    sum_of = sum(i for i in range(1, x) if i % 3 == 0 or i % 5 == 0)
+    logging.info(f'x < {x:,}, the sum of the multiples of 3 or 5 is: {sum_of:,}')
 
 
 sum_of_multiples(10)
